@@ -1,0 +1,209 @@
+/* Reset Básico e Tipografia */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ff0000;
+  color: #333;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* =========================================
+   CABEÇALHO / NAVBAR
+========================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 100%
+  );
+  color: white;
+  transition: background 0.4s ease;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.nav-links li:hover {
+  opacity: 0.6;
+}
+
+/* =========================================
+   HERO SECTION (Banner Principal)
+========================================= */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efeito Ken Burns (Zoom contínuo e lento) */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1600210491369-e753d80a41f3?q=80&w=2000&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  animation: kenBurns 20s infinite alternate linear;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Escurece um pouco para o texto aparecer */
+  z-index: -1;
+}
+
+@keyframes kenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.hero-content h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  color: white;
+  text-align: center;
+}
+
+/* =========================================
+   GRID DE PROJETOS (A Mágica do Hover)
+========================================= */
+.portfolio-section {
+  padding: 100px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* O Container do Projeto (A máscara) */
+.projeto-card {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden; /* Fundamental para o zoom não vazar a caixa */
+  cursor: pointer;
+}
+
+/* A Imagem dentro do Container */
+.projeto-imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transição suave de luxo */
+}
+
+/* O Overlay escuro e o Texto que aparecem no hover */
+.projeto-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Invisível por padrão */
+  transition: opacity 0.5s ease;
+}
+
+.projeto-info h3 {
+  color: white;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  transform: translateY(20px); /* Texto começa um pouco para baixo */
+  transition: transform 0.5s ease;
+}
+
+.projeto-info p {
+  color: #ddd;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  transform: translateY(20px);
+  transition: transform 0.6s ease; /* Leve delay em relação ao título */
+}
+
+/* =========================================
+   AÇÕES DE HOVER (Quando passa o mouse)
+========================================= */
+.projeto-card:hover .projeto-imagem {
+  transform: scale(1.08); /* Dá o zoom na foto */
+}
+
+.projeto-card:hover .projeto-info {
+  opacity: 1; /* Mostra o overlay escuro e os textos */
+}
+
+.projeto-card:hover .projeto-info h3,
+.projeto-card:hover .projeto-info p {
+  transform: translateY(
+    0
+  ); /* Faz o texto deslizar para cima, para a posição original */
+}
