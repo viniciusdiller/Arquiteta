@@ -1,4 +1,5 @@
 import "./Hero.css";
+import heroBg from "../assets/Hero.jpg";
 
 export default function Hero() {
   return (
@@ -8,6 +9,7 @@ export default function Hero() {
         aria-hidden="true"
         role="img"
         aria-label="Interior de apartamento projetado por HHeloiza Schneidewind"
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="hero__overlay" aria-hidden="true" />
       <div className="hero__content">

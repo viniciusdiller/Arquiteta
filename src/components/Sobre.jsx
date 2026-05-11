@@ -1,5 +1,6 @@
 import "./Sobre.css";
 import { sobreTexto } from "../data";
+import FotoHelo from "../assets/Helo.jpg";
 
 export default function Sobre() {
   return (
@@ -10,7 +11,7 @@ export default function Sobre() {
     >
       <div className="sobre__image-col">
         <img
-          src="/src/assets/Helo.jpg"
+          src={FotoHelo}
           alt="Heloiza Schneidewind, arquiteta e designer de interiores no Rio de Janeiro"
           className="sobre__image"
           loading="lazy"
