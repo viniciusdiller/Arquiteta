@@ -15,7 +15,7 @@ export default function Sobre() {
           height="800"
         />
       </div>
-      <div className="sobre__text-col">
+      <div className="sobre__text-col reveal">
         <p className="sobre__eyebrow">Sobre</p>
         <h2 className="sobre__headline">{sobreTexto.headline}</h2>
         <p className="sobre__bio">{sobreTexto.bio}</p>
