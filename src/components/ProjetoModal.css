@@ -27,6 +27,8 @@
   max-height: 90dvh;
   display: grid;
   grid-template-columns: 1fr 340px;
+  /* grid rows: galeria ocupa tudo menos os thumbs */
+  grid-template-rows: 1fr;
   overflow: hidden;
   transform: translateY(24px);
   transition: transform 0.4s var(--ease-out);
@@ -36,7 +38,7 @@
   transform: translateY(0);
 }
 
-/* Bot\u00e3o fechar */
+/* Botão fechar */
 .modal__close {
   position: absolute;
   top: var(--space-4);
@@ -53,16 +55,18 @@
   color: var(--color-text);
 }
 
-/* Galeria */
+/* Galeria — grid item, precisa de overflow:hidden + display:flex para
+   o min-height:0 funcionar corretamente dentro de um grid */
 .modal__gallery {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  min-height: 0;
+  overflow: hidden;      /* grid item: corta qualquer overflow */
+  min-height: 0;         /* permite que o item encolha no grid */
+  align-self: stretch;   /* ocupa toda a altura do grid */
 }
 
 .modal__main-image-wrap {
-  flex: 1;
+  flex: 1 1 0;           /* cresce E encolhe, base 0 força cálculo correto */
   min-height: 0;
   overflow: hidden;
   background: var(--color-divider);
@@ -76,19 +80,13 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(1.03);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-/* Thumbs */
+/* Thumbs — nunca encolhem, ficam fixos na base da galeria */
 .modal__thumbs {
-  flex-shrink: 0;
+  flex: 0 0 auto;        /* não cresce, não encolhe */
   display: flex;
   gap: var(--space-2);
   padding: var(--space-3);
@@ -190,7 +188,9 @@
   }
 
   .modal__gallery {
-    max-height: 55vw;
+    height: 55vw;
+    min-height: 0;
+    flex: none;
   }
 
   .modal__info {
