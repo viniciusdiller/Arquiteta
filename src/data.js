@@ -1,19 +1,19 @@
+import bobsCapa from "./assets/projetos/Bobs/capa.jpg";
+import bobslado from "./assets/projetos/Bobs/lateral.jpg";
+import bobstras from "./assets/projetos/Bobs/tras.jpg";
+
 export const projetosMock = [
   {
     id: 1,
-    slug: "projeto-blockbuster",
-    titulo: "Projeto Blockbuster",
-    subtitulo: "Apartamento 120 m\u00b2 \u2014 Leblon, Rio de Janeiro",
-    categoria: "Residencial",
-    ano: "2023",
-    imagem: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1600&auto=format&fit=crop",
-    galeria: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop",
-    ],
+    slug: "bobs",
+    titulo: "Projeto para Bobs",
+    subtitulo: "Loja de 120 m\u00b2 \u2014 Jericoacoara, Ceará",
+    categoria: "Comercial",
+    ano: "2025",
+    imagem: bobsCapa,
+    galeria: [bobstras, bobslado, bobsCapa],
     descricao:
-      "Um apartamento de 120 m\u00b2 no Leblon que equilibra sofistica\u00e7\u00e3o e acolhimento. A paleta neutra com madeiras aquecidas e m\u00e1rmore travertino cria camadas de textura sem sobrecarregar o espa\u00e7o.",
+      "Mais uma unidade do Bob’s saindo do papel com tudo no lugar: layout funcional, padrão da franquia e aquele toque especial nosso!,Assinado por mim e pela minha grande parceira, experiência e criatividade pra dar vida a mais um Bob’s, dessa vez em Jericoacoara, CE.",
   },
   {
     id: 2,
@@ -22,7 +22,8 @@ export const projetosMock = [
     subtitulo: "Cobertura duplex 80 m\u00b2 \u2014 Ipanema, Rio de Janeiro",
     categoria: "Residencial",
     ano: "2023",
-    imagem: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
+    imagem:
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
     galeria: [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1400&auto=format&fit=crop",
@@ -38,7 +39,8 @@ export const projetosMock = [
     subtitulo: "Est\u00fadio Urup\u00eas \u2014 Mostra",
     categoria: "Mostra",
     ano: "2024",
-    imagem: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop",
+    imagem:
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop",
     galeria: [
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?q=80&w=1400&auto=format&fit=crop",
@@ -49,12 +51,13 @@ export const projetosMock = [
   },
   {
     id: 4,
-    slug: "projeto-alemanha",
-    titulo: "Projeto Alemanha",
+    slug: "projeto-bobs",
+    titulo: "Projeto bobs",
     subtitulo: "Apartamento 160 m\u00b2 \u2014 Barra da Tijuca, Rio de Janeiro",
     categoria: "Residencial",
     ano: "2022",
-    imagem: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop",
+    imagem:
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop",
     galeria: [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1400&auto=format&fit=crop",
@@ -70,7 +73,8 @@ export const projetosMock = [
     subtitulo: "Casa de Jorge \u2014 Mostra",
     categoria: "Mostra",
     ano: "2025",
-    imagem: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1600&auto=format&fit=crop",
+    imagem:
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1600&auto=format&fit=crop",
     galeria: [
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1400&auto=format&fit=crop",
@@ -86,7 +90,8 @@ export const projetosMock = [
     subtitulo: "Casa 320 m\u00b2 \u2014 Rio de Janeiro",
     categoria: "Residencial",
     ano: "2022",
-    imagem: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1600&auto=format&fit=crop",
+    imagem:
+      "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1600&auto=format&fit=crop",
     galeria: [
       "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?q=80&w=1400&auto=format&fit=crop",
@@ -115,7 +120,8 @@ export const midiaItems = [
   {
     id: 3,
     veiculo: "Elle D\u00e9cor",
-    titulo: "Interiores que contam hist\u00f3rias: Paula M\u00fcller e a ess\u00eancia carioca",
+    titulo:
+      "Interiores que contam hist\u00f3rias: Paula M\u00fcller e a ess\u00eancia carioca",
     ano: "2023",
     url: "https://www.paulamuller.com.br",
   },
@@ -130,6 +136,6 @@ export const midiaItems = [
 
 export const sobreTexto = {
   headline: "Transformar espa\u00e7os \u00e9 transformar vidas.",
-  bio: "Paula M\u00fcller \u00e9 arquiteta e designer de interiores com mais de 15 anos de experi\u00eancia no Rio de Janeiro. Seu trabalho une funcionalidade, eleg\u00e2ncia e identidade \u2014 sempre a partir de um olhar atento para quem vai viver o espa\u00e7o.",
-  bio2: "Formada pela Universidade Veiga de Almeida, com especializa\u00e7\u00e3o em Design de Interiores, Paula j\u00e1 assinou projetos residenciais, comerciais e editoriais premiados, al\u00e9m de participar do CasaCor Rio em 2024 e 2025.",
+  bio: "Heloiza Schneidewind é arquiteta e designer de interiores com mais de 10 anos de experi\u00eancia no Rio de Janeiro. Seu trabalho une funcionalidade, elegância e identidade \u2014 sempre a partir de um olhar atento para quem vai viver o espa\u00e7o.",
+  bio2: "Formada pela Universidade Veiga de Almeida, com especializa\u00e7\u00e3o em Design de Interiores, Heloiza j\u00e1 assinou projetos residenciais, comerciais e editoriais premiados, al\u00e9m de participar do CasaCor Rio em 2024 e 2025.",
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Cursor.css";
 
 export default function Cursor() {
@@ -9,8 +9,10 @@ export default function Cursor() {
     // Oculta cursor nativo
     document.body.classList.add("custom-cursor-active");
 
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
+    let mouseX = 0,
+      mouseY = 0;
+    let ringX = 0,
+      ringY = 0;
     let raf;
 
     const onMove = (e) => {

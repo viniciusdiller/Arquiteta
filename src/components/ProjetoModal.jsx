@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./ProjetoModal.css";
 
 export default function ProjetoModal({ projeto, onClose }) {
@@ -33,9 +33,18 @@ export default function ProjetoModal({ projeto, onClose }) {
       aria-label={`Projeto ${projeto.titulo}`}
     >
       <div className={`modal ${visible ? "modal--visible" : ""}`}>
-        <button className="modal__close" onClick={handleClose} aria-label="Fechar">
+        <button
+          className="modal__close"
+          onClick={handleClose}
+          aria-label="Fechar"
+        >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M2 2l16 16M18 2L2 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path
+              d="M2 2l16 16M18 2L2 18"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
           </svg>
         </button>
 
@@ -67,7 +76,9 @@ export default function ProjetoModal({ projeto, onClose }) {
         </div>
 
         <div className="modal__info">
-          <p className="modal__categoria">{projeto.categoria} — {projeto.ano}</p>
+          <p className="modal__categoria">
+            {projeto.categoria} — {projeto.ano}
+          </p>
           <h2 className="modal__titulo">{projeto.titulo}</h2>
           <p className="modal__subtitulo">{projeto.subtitulo}</p>
           <div className="modal__divider" />

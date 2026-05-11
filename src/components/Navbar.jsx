@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -21,25 +21,28 @@ export default function Navbar() {
           if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
   }, []);
 
   const navItems = [
-    { label: "Home",     href: "#home" },
+    { label: "Home", href: "#home" },
     { label: "Projetos", href: "#projetos" },
-    { label: "Mídia",    href: "#midia" },
-    { label: "Sobre",    href: "#sobre" },
-    { label: "Contato",  href: "#contato" },
+    { label: "Mídia", href: "#midia" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Contato", href: "#contato" },
   ];
 
   return (
-    <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`} role="banner">
+    <header
+      className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}
+      role="banner"
+    >
       <div className="navbar__logo">
-        <a href="#home" aria-label="Paula Müller — Página inicial">
-          <span className="navbar__logo-name">Paula Müller</span>
+        <a href="#home" aria-label="Heloiza Schneidewind — Página inicial">
+          <span className="navbar__logo-name">Heloiza Schneidewind</span>
           <span className="navbar__logo-sub">Arquitetura &amp; Interiores</span>
         </a>
       </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Midia.css";
 import { midiaItems } from "../data";
 
@@ -24,13 +23,19 @@ export default function Midia() {
               className="midia__link"
               aria-label={`${item.titulo} — ${item.veiculo}, ${item.ano} (abre em nova aba)`}
             >
-              <span className="midia__index" aria-hidden="true">0{index + 1}</span>
+              <span className="midia__index" aria-hidden="true">
+                0{index + 1}
+              </span>
               <div className="midia__body">
                 <p className="midia__veiculo">{item.veiculo}</p>
                 <h3 className="midia__titulo">{item.titulo}</h3>
               </div>
-              <span className="midia__ano" aria-hidden="true">{item.ano}</span>
-              <span className="midia__arrow" aria-hidden="true">↗</span>
+              <span className="midia__ano" aria-hidden="true">
+                {item.ano}
+              </span>
+              <span className="midia__arrow" aria-hidden="true">
+                ↗
+              </span>
             </a>
           </li>
         ))}
