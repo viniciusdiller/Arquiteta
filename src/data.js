@@ -11,7 +11,7 @@ export const projetosMock = [
     categoria: "Comercial",
     ano: "2025",
     imagem: bobsCapa,
-    galeria: [bobstras, bobslado, bobsCapa],
+    galeria: [bobsCapa, bobstras, bobslado],
     descricao:
       "Mais uma unidade do Bob’s saindo do papel com tudo no lugar: layout funcional, padrão da franquia e aquele toque especial nosso!,Assinado por mim e pela minha grande parceira, experiência e criatividade pra dar vida a mais um Bob’s, dessa vez em Jericoacoara, CE.",
   },
