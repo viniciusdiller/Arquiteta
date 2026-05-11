@@ -8,35 +8,40 @@ export default function Portfolio() {
 
   return (
     <>
-      <section className="portfolio" id="projetos">
+      <section
+        className="portfolio"
+        id="projetos"
+        aria-label="Portfólio de projetos"
+      >
         <div className="portfolio__header reveal">
           <p className="portfolio__eyebrow">Trabalhos Selecionados</p>
           <h2 className="portfolio__title">Portfólio</h2>
         </div>
 
-        <div className="portfolio__grid">
+        <div className="portfolio__grid" role="list">
           {projetosMock.map((projeto, index) => (
             <article
               key={projeto.id}
               className="projeto-card reveal"
               style={{ transitionDelay: `${index * 80}ms` }}
               onClick={() => setProjetoAtivo(projeto)}
-              role="button"
+              role="listitem"
               tabIndex={0}
-              aria-label={`Ver projeto ${projeto.titulo}`}
+              aria-label={`${projeto.titulo} — ${projeto.subtitulo}. Clique para ver detalhes.`}
               onKeyDown={(e) => e.key === "Enter" && setProjetoAtivo(projeto)}
             >
               <div className="projeto-card__image-wrap">
                 <img
                   src={projeto.imagem}
-                  alt={projeto.titulo}
+                  alt={`${projeto.titulo} — ${projeto.subtitulo}`}
                   className="projeto-card__image"
                   loading={index < 2 ? "eager" : "lazy"}
+                  decoding="async"
                   width="800"
                   height="600"
                 />
               </div>
-              <div className="projeto-card__overlay">
+              <div className="projeto-card__overlay" aria-hidden="true">
                 <div className="projeto-card__info">
                   <p className="projeto-card__categoria">{projeto.categoria} — {projeto.ano}</p>
                   <h3 className="projeto-card__titulo">{projeto.titulo}</h3>

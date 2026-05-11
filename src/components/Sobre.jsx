@@ -4,13 +4,14 @@ import { sobreTexto } from "../data";
 
 export default function Sobre() {
   return (
-    <section className="sobre" id="sobre">
+    <section className="sobre" id="sobre" aria-label="Sobre Paula Müller">
       <div className="sobre__image-col">
         <img
           src="https://images.unsplash.com/photo-1551292831-023188e78222?q=80&w=1200&auto=format&fit=crop"
-          alt="Paula Müller Arquiteta"
+          alt="Paula Müller, arquiteta e designer de interiores no Rio de Janeiro"
           className="sobre__image"
           loading="lazy"
+          decoding="async"
           width="600"
           height="800"
         />

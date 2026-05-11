@@ -15,7 +15,7 @@ export default function App() {
     <>
       <Cursor />
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Portfolio />
         <Midia />
