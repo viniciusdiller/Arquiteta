@@ -1,60 +1,26 @@
-import React from "react";
-import "./App.css";
-import { projetosMock } from "./data";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Portfolio from "./components/Portfolio";
+import Midia from "./components/Midia";
+import Sobre from "./components/Sobre";
+import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
+import { useScrollReveal } from "./hooks/useScrollReveal";
 
-function App() {
+export default function App() {
+  useScrollReveal();
+
   return (
     <>
-      {/* Navbar Transparente sobreposta */}
-      <nav className="navbar">
-        <div className="logo-text">
-          <h2 style={{ fontWeight: 300, letterSpacing: "4px" }}>
-            PAULA MÜLLER
-          </h2>
-        </div>
-        <ul className="nav-links">
-          <li>Home</li>
-          <li>Projetos</li>
-          <li>Serviços</li>
-          <li>Sobre</li>
-          <li>Contato</li>
-        </ul>
-      </nav>
-
-      {/* Hero Section com Animação Infinita (Ken Burns) */}
-      <section className="hero-section">
-        <div className="hero-bg"></div>
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1>ARQUITETURA & DESIGN</h1>
-        </div>
-      </section>
-
-      {/* Grid de Projetos Mockados */}
-      <section className="portfolio-section">
-        <h2 className="section-title">Portfólio</h2>
-
-        <div className="grid-container">
-          {projetosMock.map((projeto) => (
-            <div className="projeto-card" key={projeto.id}>
-              {/* Imagem do Projeto */}
-              <img
-                src={projeto.imagem}
-                alt={projeto.titulo}
-                className="projeto-imagem"
-              />
-
-              {/* Informações que aparecem no Hover */}
-              <div className="projeto-info">
-                <h3>{projeto.titulo}</h3>
-                <p>{projeto.categoria}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Cursor />
+      <Navbar />
+      <main id="main-content">
+        <Hero />
+        <Portfolio />
+        <Midia />
+        <Sobre />
+      </main>
+      <Footer />
     </>
   );
 }
-
-export default App;

@@ -1,0 +1,137 @@
+.hero {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(var(--space-12), 8vh, var(--space-24));
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Imagem de fundo com Ken Burns */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("src/assets/Hero.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  animation: kenBurns 22s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1);
+    background-position: center 40%;
+  }
+  to {
+    transform: scale(1.12);
+    background-position: center 55%;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-text-inverse);
+  max-width: var(--content-narrow);
+}
+
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: var(--space-4);
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin-bottom: var(--space-8);
+}
+
+.hero__cta {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-inverse);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: var(--space-1);
+  transition:
+    border-color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.hero__cta:hover {
+  border-color: rgba(255, 255, 255, 1);
+  opacity: 0.85;
+}
+
+/* Indicador de scroll */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: var(--space-8);
+  right: 5%;
+  z-index: 2;
+}
+
+.hero__scroll-hint span {
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-end;
+    padding-bottom: var(--space-16);
+  }
+
+  .hero__headline {
+    font-size: var(--text-xl);
+  }
+}
