@@ -35,6 +35,17 @@ export default function Cursor() {
     // Expande sobre elementos interativos e imagens
     const onEnter = (e) => {
       const t = e.target;
+
+      if (t.closest("footer")) {
+        dotRef.current?.classList.add("cursor__dot--light");
+        ringRef.current?.classList.add("cursor__ring--light");
+      }
+
+      if (t.closest(".midia__item")) {
+        dotRef.current?.classList.add("cursor__dot--light");
+        ringRef.current?.classList.add("cursor__ring--light");
+      }
+
       if (
         t.tagName === "IMG" ||
         t.tagName === "A" ||
@@ -44,7 +55,18 @@ export default function Cursor() {
         ringRef.current?.classList.add("cursor__ring--expand");
       }
     };
-    const onLeave = () => {
+
+    const onLeave = (e) => {
+      if (e.target.closest("footer")) {
+        dotRef.current?.classList.remove("cursor__dot--light");
+        ringRef.current?.classList.remove("cursor__ring--light");
+      }
+
+      if (e.target.closest(".midia__item")) {
+        dotRef.current?.classList.remove("cursor__dot--light");
+        ringRef.current?.classList.remove("cursor__ring--light");
+      }
+
       ringRef.current?.classList.remove("cursor__ring--expand");
     };
 

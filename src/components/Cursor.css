@@ -46,6 +46,17 @@
   border-color: rgba(26, 25, 22, 0.25);
 }
 
+.cursor__dot--light {
+  background: #f5f3ef;
+}
+
+.cursor__ring--light {
+  border-color: rgba(245, 243, 239, 0.5);
+}
+
+.cursor__ring--light.cursor__ring--expand {
+  border-color: rgba(245, 243, 239, 0.25);
+}
 /* Desativa em touch */
 @media (hover: none) {
   .cursor__dot,

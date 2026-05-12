@@ -11,7 +11,7 @@
   grid-template-columns: 1fr auto;
   align-items: end;
   gap: var(--space-8);
-  border-top: 1px solid rgba(255,255,255,0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: var(--space-10);
 }
 
@@ -69,6 +69,11 @@
   opacity: 0.35;
   letter-spacing: 0.05em;
   margin-top: var(--space-8);
+}
+
+.footer ::selection {
+  background: rgba(245, 243, 239, 0.3);
+  color: #f5f3ef;
 }
 
 @media (max-width: 600px) {
