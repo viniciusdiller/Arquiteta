@@ -1,6 +1,6 @@
 import "./Sobre.css";
 import { sobreTexto } from "../data";
-import FotoHelo from "../assets/Helo.jpg";
+import FotoHelo from "../assets/Helo.jpeg";
 
 export default function Sobre() {
   return (
