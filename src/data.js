@@ -136,6 +136,7 @@ export const midiaItems = [
 
 export const sobreTexto = {
   headline: "Transformar espa\u00e7os \u00e9 transformar vidas.",
-  bio: "Heloiza Schneidewind é arquiteta e designer de interiores com mais de 10 anos de experi\u00eancia no Rio de Janeiro. Seu trabalho une funcionalidade, elegância e identidade \u2014 sempre a partir de um olhar atento para quem vai viver o espa\u00e7o.",
-  bio2: "Formada pela Universidade Veiga de Almeida, com especializa\u00e7\u00e3o em Design de Interiores, Heloiza j\u00e1 assinou projetos residenciais, comerciais e editoriais premiados, al\u00e9m de participar do CasaCor Rio em 2024 e 2025.",
+  bio: "Sou formada em Arquitetura e Urbanismo desde 2020 e atuo como arquiteta desenvolvendo projetos arquitetônicos e de interiores. Ao longo desses anos, trabalhei em diferentes tipos de projetos, como fachadas comerciais, interiores residenciais, espaços cenográficos e projetos para franquias, sempre buscando unir estética, funcionalidade e identidade em cada detalhe.",
+  bio2: "Acredito que a arquitetura vai muito além de criar espaços bonitos, ela precisa transmitir sensações, trazer conforto e fazer sentido para quem vai viver aquele ambiente. Por isso, gosto de desenvolver cada projeto de forma personalizada, entendendo a necessidade de cada cliente e transformando ideias em espaços únicos, modernos e acolhedores. Meu objetivo é criar projetos com personalidade, atenção aos detalhes e soluções inteligentes, valorizando tanto a estética quanto a funcionalidade de cada ambiente.",
 };
+
