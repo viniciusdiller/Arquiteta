@@ -71,6 +71,10 @@
   margin-top: var(--space-8);
 }
 
+.footer__producer {
+  text-decoration: underline;
+}
+
 .footer ::selection {
   background: rgba(245, 243, 239, 0.3);
   color: #f5f3ef;

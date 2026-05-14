@@ -7,7 +7,7 @@ export default function Cursor() {
 
   useEffect(() => {
     // Oculta cursor nativo
-    document.body.classList.add("custom-cursor-active");
+    document.documentElement.classList.add("custom-cursor-active");
 
     let mouseX = 0,
       mouseY = 0;
@@ -37,12 +37,10 @@ export default function Cursor() {
       const t = e.target;
 
       if (t.closest("footer")) {
-        dotRef.current?.classList.add("cursor__dot--light");
         ringRef.current?.classList.add("cursor__ring--light");
       }
 
       if (t.closest(".midia__item")) {
-        dotRef.current?.classList.add("cursor__dot--light");
         ringRef.current?.classList.add("cursor__ring--light");
       }
 
@@ -58,12 +56,10 @@ export default function Cursor() {
 
     const onLeave = (e) => {
       if (e.target.closest("footer")) {
-        dotRef.current?.classList.remove("cursor__dot--light");
         ringRef.current?.classList.remove("cursor__ring--light");
       }
 
       if (e.target.closest(".midia__item")) {
-        dotRef.current?.classList.remove("cursor__dot--light");
         ringRef.current?.classList.remove("cursor__ring--light");
       }
 
@@ -80,7 +76,7 @@ export default function Cursor() {
       document.removeEventListener("mouseover", onEnter);
       document.removeEventListener("mouseout", onLeave);
       cancelAnimationFrame(raf);
-      document.body.classList.remove("custom-cursor-active");
+      document.documentElement.classList.remove("custom-cursor-active");
     };
   }, []);
 

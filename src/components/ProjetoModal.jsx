@@ -10,7 +10,29 @@ export default function ProjetoModal({ projeto, onClose }) {
   }, []);
 
   useEffect(() => {
-    const onKey = (e) => e.key === "Escape" && handleClose();
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        handleClose();
+        return;
+      }
+
+      if (projeto.galeria.length < 2) {
+        return;
+      }
+
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        setImagemAtiva((current) => (current + 1) % projeto.galeria.length);
+      }
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        setImagemAtiva((current) =>
+          (current - 1 + projeto.galeria.length) % projeto.galeria.length,
+        );
+      }
+    };
+
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {

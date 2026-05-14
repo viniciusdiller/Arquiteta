@@ -41,8 +41,21 @@ export default function Footer() {
 
         <p className="footer__copy">
           &copy; {new Date().getFullYear()} Heloiza Schneidewind Arquitetura.
-          Todos os direitos reservados.
+          Todos os direitos reservados. <br/>
+           produced by{" "}
+          <a
+            className="footer__producer"
+            href="https://www.instagram.com/totalsoftware.ofc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Total Software (abre em nova aba)"
+          >
+            Total Software
+          </a>
+          .
         </p>
+        
+
       </div>
     </footer>
   );
