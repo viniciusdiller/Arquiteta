@@ -16,7 +16,7 @@ export default function Footer() {
 
         <nav className="footer__links" aria-label="Links externos">
           <a
-            href="https://www.instagram.com/heloschneidewind/"
+            href="https://www.instagram.com/heloiza.arq/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram de Heloiza Schneidewind (abre em nova aba)"

@@ -25,7 +25,7 @@ export default function Sobre() {
         <h2 className="sobre__headline">{sobreTexto.headline}</h2>
         <p className="sobre__bio">{sobreTexto.bio}</p>
         <p className="sobre__bio">{sobreTexto.bio2}</p>
-        <a href="#contato" className="sobre__cta">
+        <a href="https://www.instagram.com/heloiza.arq/" target="_blank" rel="noopener noreferrer" className="sobre__cta">
           Fale comigo
         </a>
       </div>
