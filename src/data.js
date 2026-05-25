@@ -8,8 +8,8 @@ export const projetosMock = [
     ano: "2025",
     imagem: "/projetos/Bobs/capa.jpg",
     galeria: [
-      { src: "/projetos/Bobs/capa.jpg", label: "Depois" },
-      { src: "/projetos/Bobs/tras.jpg", label: "Antes" },
+      { src: "/projetos/Bobs/capa.jpg", label: "Detalhe" },
+      { src: "/projetos/Bobs/tras.jpg", label: "Detalhe" },
       { src: "/projetos/Bobs/lateral.jpg", label: "Detalhe" },
     ],
     descricao:
