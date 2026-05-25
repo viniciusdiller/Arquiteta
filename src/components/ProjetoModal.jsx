@@ -5,6 +5,9 @@ export default function ProjetoModal({ projeto, onClose }) {
   const [imagemAtiva, setImagemAtiva] = useState(0);
   const [visible, setVisible] = useState(false);
 
+  const getImagemSrc = (item) => (typeof item === "string" ? item : item.src);
+  const getImagemLabel = (item) => (typeof item === "string" ? null : item.label);
+
   useEffect(() => {
     requestAnimationFrame(() => setVisible(true));
   }, []);
@@ -72,9 +75,14 @@ export default function ProjetoModal({ projeto, onClose }) {
 
         <div className="modal__gallery">
           <div className="modal__main-image-wrap">
+            {getImagemLabel(projeto.galeria[imagemAtiva]) && (
+              <span className="modal__badge">
+                {getImagemLabel(projeto.galeria[imagemAtiva])}
+              </span>
+            )}
             <img
               key={imagemAtiva}
-              src={projeto.galeria[imagemAtiva]}
+              src={getImagemSrc(projeto.galeria[imagemAtiva])}
               alt={`${projeto.titulo} — imagem ${imagemAtiva + 1}`}
               className="modal__main-image"
               width="1200"
@@ -88,9 +96,12 @@ export default function ProjetoModal({ projeto, onClose }) {
                   key={i}
                   className={`modal__thumb ${imagemAtiva === i ? "modal__thumb--active" : ""}`}
                   onClick={() => setImagemAtiva(i)}
-                  aria-label={`Ver imagem ${i + 1}`}
+                  aria-label={`Ver imagem ${i + 1}${getImagemLabel(img) ? ` — ${getImagemLabel(img)}` : ""}`}
                 >
-                  <img src={img} alt="" width="120" height="80" />
+                  <img src={getImagemSrc(img)} alt="" width="120" height="80" />
+                  {getImagemLabel(img) && (
+                    <span className="modal__thumb-badge">{getImagemLabel(img)}</span>
+                  )}
                 </button>
               ))}
             </div>
