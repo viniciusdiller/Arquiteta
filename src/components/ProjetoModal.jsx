@@ -6,8 +6,14 @@ export default function ProjetoModal({ projeto, onClose }) {
   const [visible, setVisible] = useState(false);
   const touchStartX = useRef(null);
 
+  const total = projeto.galeria.length;
   const getImagemSrc = (item) => (typeof item === "string" ? item : item.src);
   const getImagemLabel = (item) => (typeof item === "string" ? null : item.label);
+
+  const irParaProxima = () =>
+    setImagemAtiva((current) => (current + 1) % total);
+  const irParaAnterior = () =>
+    setImagemAtiva((current) => (current - 1 + total) % total);
 
   useEffect(() => {
     requestAnimationFrame(() => setVisible(true));
@@ -19,22 +25,9 @@ export default function ProjetoModal({ projeto, onClose }) {
         handleClose();
         return;
       }
-
-      if (projeto.galeria.length < 2) {
-        return;
-      }
-
-      if (e.key === "ArrowRight") {
-        e.preventDefault();
-        setImagemAtiva((current) => (current + 1) % projeto.galeria.length);
-      }
-
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        setImagemAtiva((current) =>
-          (current - 1 + projeto.galeria.length) % projeto.galeria.length,
-        );
-      }
+      if (total < 2) return;
+      if (e.key === "ArrowRight") { e.preventDefault(); irParaProxima(); }
+      if (e.key === "ArrowLeft")  { e.preventDefault(); irParaAnterior(); }
     };
 
     document.addEventListener("keydown", onKey);
@@ -43,7 +36,7 @@ export default function ProjetoModal({ projeto, onClose }) {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, []);
+  }, [total]);
 
   function handleClose() {
     setVisible(false);
@@ -51,7 +44,7 @@ export default function ProjetoModal({ projeto, onClose }) {
   }
 
   function handleTouchStart(e) {
-    if (projeto.galeria.length < 2) return;
+    if (total < 2) return;
     touchStartX.current = e.touches[0].clientX;
   }
 
@@ -59,18 +52,8 @@ export default function ProjetoModal({ projeto, onClose }) {
     if (touchStartX.current === null) return;
     const deltaX = e.changedTouches[0].clientX - touchStartX.current;
     touchStartX.current = null;
-
     if (Math.abs(deltaX) < 50) return;
-
-    if (deltaX < 0) {
-      // Swipe para a esquerda => próxima imagem
-      setImagemAtiva((current) => (current + 1) % projeto.galeria.length);
-    } else {
-      // Swipe para a direita => imagem anterior
-      setImagemAtiva((current) =>
-        (current - 1 + projeto.galeria.length) % projeto.galeria.length,
-      );
-    }
+    deltaX < 0 ? irParaProxima() : irParaAnterior();
   }
 
   return (
@@ -116,8 +99,31 @@ export default function ProjetoModal({ projeto, onClose }) {
               width="1200"
               height="800"
             />
+            {total > 1 && (
+              <>
+                <button
+                  className="modal__nav modal__nav--prev"
+                  onClick={irParaAnterior}
+                  aria-label="Imagem anterior"
+                >
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12 4l-7 6 7 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                <button
+                  className="modal__nav modal__nav--next"
+                  onClick={irParaProxima}
+                  aria-label="Próxima imagem"
+                >
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M8 4l7 6-7 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              </>
+            )}
           </div>
-          {projeto.galeria.length > 1 && (
+
+          {total > 1 && (
             <div className="modal__thumbs">
               {projeto.galeria.map((img, i) => (
                 <button

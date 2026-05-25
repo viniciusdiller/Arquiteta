@@ -27,7 +27,6 @@
   max-height: 90dvh;
   display: grid;
   grid-template-columns: 1fr 340px;
-  /* grid rows: galeria ocupa tudo menos os thumbs */
   grid-template-rows: 1fr;
   overflow: hidden;
   transform: translateY(24px);
@@ -55,22 +54,59 @@
   color: var(--color-text);
 }
 
-/* Galeria — grid item, precisa de overflow:hidden + display:flex para
-   o min-height:0 funcionar corretamente dentro de um grid */
+/* Galeria */
 .modal__gallery {
   display: flex;
   flex-direction: column;
-  overflow: hidden;      /* grid item: corta qualquer overflow */
-  min-height: 0;         /* permite que o item encolha no grid */
-  align-self: stretch;   /* ocupa toda a altura do grid */
+  overflow: hidden;
+  min-height: 0;
+  align-self: stretch;
 }
 
 .modal__main-image-wrap {
-  flex: 1 1 0;           /* cresce E encolhe, base 0 força cálculo correto */
+  flex: 1 1 0;
   min-height: 0;
   overflow: hidden;
   background: var(--color-divider);
   position: relative;
+}
+
+/* Botões de navegação prev / next (desktop) */
+.modal__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  pointer-events: none;
+}
+
+.modal__main-image-wrap:hover .modal__nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__nav:hover {
+  color: var(--color-text);
+}
+
+.modal__nav--prev { left: var(--space-3); }
+.modal__nav--next { right: var(--space-3); }
+
+/* Esconde as setas em touch (swipe já cobre) */
+@media (hover: none) {
+  .modal__nav {
+    display: none;
+  }
 }
 
 .modal__badge {
@@ -100,9 +136,9 @@
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* Thumbs — nunca encolhem, ficam fixos na base da galeria */
+/* Thumbs */
 .modal__thumbs {
-  flex: 0 0 auto;        /* não cresce, não encolhe */
+  flex: 0 0 auto;
   display: flex;
   gap: var(--space-2);
   padding: var(--space-3);
