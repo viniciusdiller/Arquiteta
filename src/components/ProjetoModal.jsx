@@ -1,1 +1,151 @@
-aW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VSZWYsIHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgIi4vUHJvamV0b01vZGFsLmNzcyI7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBQcm9qZXRvTW9kYWwoeyBwcm9qZXRvLCBvbkNsb3NlIH0pIHsKICBjb25zdCBbaW1hZ2VtQXRpdmEsIHNldEltYWdlbUF0aXZhXSA9IHVzZVN0YXRlKDApOwogIGNvbnN0IFt2aXNpYmxlLCBzZXRWaXNpYmxlXSA9IHVzZVN0YXRlKGZhbHNlKTsKICBjb25zdCB0b3VjaFN0YXJ0WCA9IHVzZVJlZihudWxsKTsKCiAgY29uc3QgZ2V0SW1hZ2VtU3JjID0gKGl0ZW0pID0+ICh0eXBlb2YgaXRlbSA9PT0gInN0cmluZyIgPyBpdGVtIDogaXRlbS5zcmMpOwogIGNvbnN0IGdldEltYWdlbUxhYmVsID0gKGl0ZW0pID0+ICh0eXBlb2YgaXRlbSA9PT0gInN0cmluZyIgPyBudWxsIDogaXRlbS5sYWJlbCk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICByZXF1ZXN0QW5pbWF0aW9uRnJhbWUoKCkgPT4gc2V0VmlzaWJsZSh0cnVlKSk7CiAgfSwgW10pOwoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY29uc3Qgb25LZXkgPSAoZSkgPT4gewogICAgICBpZiAoZS5rZXkgPT09ICJFc2NhcGUiKSB7CiAgICAgICAgaGFuZGxlQ2xvc2UoKTsKICAgICAgICByZXR1cm47CiAgICAgIH0KCiAgICAgIGlmIChwcm9qZXRvLmdhbGVyaWEubGVuZ3RoIDwgMikgewogICAgICAgIHJldHVybjsKICAgICAgfQoKICAgICAgaWYgKGUua2V5ID09PSAiQXJyb3dSaWdodCIpIHsKICAgICAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICAgICAgc2V0SW1hZ2VtQXRpdmEoKGN1cnJlbnQpID0+IChjdXJyZW50ICsgMSkgJSBwcm9qZXRvLmdhbGVyaWEubGVuZ3RoKTsKICAgICAgfQoKICAgICAgaWYgKGUua2V5ID09PSAiQXJyb3dMZWZ0IikgewogICAgICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgICAgICBzZXRJbWFnZW1BdGl2YSgoY3VycmVudCkgPT4KICAgICAgICAgIChjdXJyZW50IC0gMSArIHByb2pldG8uZ2FsZXJpYS5sZW5ndGgpICUgcHJvamV0by5nYWxlcmlhLmxlbmd0aCwKICAgICAgICApOwogICAgICB9CiAgICB9OwoKICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoImtleWRvd24iLCBvbktleSk7CiAgICBkb2N1bWVudC5ib2R5LnN0eWxlLm92ZXJmbG93ID0gImhpZGRlbiI7CiAgICByZXR1cm4gKCkgPT4gewogICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCJrZXlkb3duIiwgb25LZXkpOwogICAgICBkb2N1bWVudC5ib2R5LnN0eWxlLm92ZXJmbG93ID0gIiI7CiAgICB9OwogIH0sIFtdKTsKCiAgZnVuY3Rpb24gaGFuZGxlQ2xvc2UoKSB7CiAgICBzZXRWaXNpYmxlKGZhbHNlKTsKICAgIHNldFRpbWVvdXQob25DbG9zZSwgNDAwKTsKICB9CgogIGZ1bmN0aW9uIGhhbmRsZVRvdWNoU3RhcnQoZSkgewogICAgaWYgKHByb2pldG8uZ2FsZXJpYS5sZW5ndGggPCAyKSByZXR1cm47CiAgICB0b3VjaFN0YXJ0WC5jdXJyZW50ID0gZS50b3VjaGVzWzBdLmNsaWVudFg7CiAgfQoKICBmdW5jdGlvbiBoYW5kbGVUb3VjaEVuZChlKSB7CiAgICBpZiAodG91Y2hTdGFydFguY3VycmVudCA9PT0gbnVsbCkgcmV0dXJuOwogICAgY29uc3QgZGVsdGFYID0gZS5jaGFuZ2VkVG91Y2hlc1swXS5jbGllbnRYIC0gdG91Y2hTdGFydFguY3VycmVudDsKICAgIHRvdWNoU3RhcnRYLmN1cnJlbnQgPSBudWxsOwoKICAgIGlmIChNYXRoLmFicyhkZWx0YVgpIDwgNTApIHJldHVybjsKCiAgICBpZiAoZGVsdGFYIDwgMCkgewogICAgICAvLyBTd2lwZSBwYXJhIGEgZXNxdWVyZGEgPT4gcHLDs3hpbWEgaW1hZ2VtCiAgICAgIHNldEltYWdlbUF0aXZhKChjdXJyZW50KSA9PiAoY3VycmVudCArIDEpICUgcHJvamV0by5nYWxlcmlhLmxlbmd0aCk7CiAgICB9IGVsc2UgewogICAgICAvLyBTd2lwZSBwYXJhIGEgZGlyZWl0YSA9PiBpbWFnZW0gYW50ZXJpb3IKICAgICAgc2V0SW1hZ2VtQXRpdmEoKGN1cnJlbnQpID0+CiAgICAgICAgKGN1cnJlbnQgLSAxICsgcHJvamV0by5nYWxlcmlhLmxlbmd0aCkgJSBwcm9qZXRvLmdhbGVyaWEubGVuZ3RoLAogICAgICApOwogICAgfQogIH0KCiAgcmV0dXJuICgKICAgIDxkaXYKICAgICAgY2xhc3NOYW1lPXtgbW9kYWwtYmFja2Ryb3AgJHt2aXNpYmxlID8gIm1vZGFsLWJhY2tkcm9wLS12aXNpYmxlIiA6ICIifWB9CiAgICAgIG9uQ2xpY2s9eyhlKSA9PiBlLnRhcmdldCA9PT0gZS5jdXJyZW50VGFyZ2V0ICYmIGhhbmRsZUNsb3NlKCl9CiAgICAgIHJvbGU9ImRpYWxvZyIKICAgICAgYXJpYS1tb2RhbD0idHJ1ZSIKICAgICAgYXJpYS1sYWJlbD17YFByb2pldG8gJHtwcm9qZXRvLnRpdHVsb31gfQogICAgPgogICAgICA8ZGl2IGNsYXNzTmFtZT17YG1vZGFsICR7dmlzaWJsZSA/ICJtb2RhbC0tdmlzaWJsZSIgOiAiIn1gfT4KICAgICAgICA8YnV0dG9uCiAgICAgICAgICBjbGFzc05hbWU9Im1vZGFsX19jbG9zZSIKICAgICAgICAgIG9uQ2xpY2s9e2hhbmRsZUNsb3NlfQogICAgICAgICAgYXJpYS1sYWJlbD0iRmVjaGFyIgogICAgICAgID4KICAgICAgICAgIDxzdmcgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiIGZpbGw9Im5vbmUiPgogICAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgIGQ9Ik0yIDJsMTYgMTZNMTggMkwyIDE4IgogICAgICAgICAgICAgIHN0cm9rZT0iY3VycmVudENvbG9yIgogICAgICAgICAgICAgIHN0cm9rZVdpZHRoPSIxLjUiCiAgICAgICAgICAgICAgc3Ryb2tlTGluZWNhcD0icm91bmQiCiAgICAgICAgICAgIC8+CiAgICAgICAgICA8L3N2Zz4KICAgICAgICA8L2J1dHRvbj4KCiAgICAgICAgPGRpdgogICAgICAgICAgY2xhc3NOYW1lPSJtb2RhbF9fZ2FsbGVyeSIKICAgICAgICAgIG9uVG91Y2hTdGFydD17aGFuZGxlVG91Y2hTdGFydH0KICAgICAgICAgIG9uVG91Y2hFbmQ9e2hhbmRsZVRvdWNoRW5kfQogICAgICAgID4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtb2RhbF9fbWFpbi1pbWFnZS13cmFwIj4KICAgICAgICAgICAge2dldEltYWdlbUxhYmVsKHByb2pldG8uZ2FsZXJpYVtpbWFnZW1BdGl2YV0pICYmICgKICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9Im1vZGFsX19iYWRnZSI+CiAgICAgICAgICAgICAgICB7Z2V0SW1hZ2VtTGFiZWwocHJvamV0by5nYWxlcmlhW2ltYWdlbUF0aXZhXSl9CiAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICApfQogICAgICAgICAgICA8aW1nCiAgICAgICAgICAgICAga2V5PXtpbWFnZW1BdGl2YX0KICAgICAgICAgICAgICBzcmM9e2dldEltYWdlbVNyYyhwcm9qZXRvLmdhbGVyaWFbaW1hZ2VtQXRpdmFdKX0KICAgICAgICAgICAgICBhbHQ9e2Ake3Byb2pldG8udGl0dWxvfSAtIGltYWdlbSAke2ltYWdlbUF0aXZhICsgMX1gfQogICAgICAgICAgICAgIGNsYXNzTmFtZT0ibW9kYWxfX21haW4taW1hZ2UiCiAgICAgICAgICAgICAgd2lkdGg9IjEyMDAiCiAgICAgICAgICAgICAgaGVpZ2h0PSI4MDAiCiAgICAgICAgICAgIC8+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIHtwcm9qZXRvLmdhbGVyaWEubGVuZ3RoID4gMSAmJiAoCiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtb2RhbF9fdGh1bWJzIj4KICAgICAgICAgICAgICB7cHJvamV0by5nYWxlcmlhLm1hcCgoaW1nLCBpKSA9PiAoCiAgICAgICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAgICAgIGtleT17aX0KICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgbW9kYWxfX3RodW1iICR7aW1hZ2VtQXRpdmEgPT09IGkgPyAibW9kYWxfX3RodW1iLS1hY3RpdmUiIDogIiJ9YH0KICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0SW1hZ2VtQXRpdmEoaSl9CiAgICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9e2BWZXIgaW1hZ2VtICR7aSArIDF9JHtnZXRJbWFnZW1MYWJlbChpbWcpID8gYCAtICR7Z2V0SW1hZ2VtTGFiZWwoaW1nKX1gIDogIiJ9YH0KICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgPGltZyBzcmM9e2dldEltYWdlbVNyYyhpbWcpfSBhbHQ9IiIgd2lkdGg9IjEyMCIgaGVpZ2h0PSI4MCIgLz4KICAgICAgICAgICAgICAgICAge2dldEltYWdlbUxhYmVsKGltZykgJiYgKAogICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ibW9kYWxfX3RodW1iLWJhZGdlIj57Z2V0SW1hZ2VtTGFiZWwoaW1nKX08L3NwYW4+CiAgICAgICAgICAgICAgICAgICl9CiAgICAgICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApfQogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibW9kYWxfX2luZm8iPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJtb2RhbF9fY2F0ZWdvcmlhIj4KICAgICAgICAgICAge3Byb2pldG8uY2F0ZWdvcmlhfSAtIHtwcm9qZXRvLmFub30KICAgICAgICAgIDwvcD4KICAgICAgICAgIDxoMiBjbGFzc05hbWU9Im1vZGFsX190aXR1bG8iPntwcm9qZXRvLnRpdHVsb308L2gyPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJtb2RhbF9fc3VidGl0dWxvIj57cHJvamV0by5zdWJ0aXR1bG99PC9wPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1vZGFsX19kaXZpZGVyIiAvPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJtb2RhbF9fZGVzY3JpY2FvIj57cHJvamV0by5kZXNjcmljYW99PC9wPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K
+import { useEffect, useRef, useState } from "react";
+import "./ProjetoModal.css";
+
+export default function ProjetoModal({ projeto, onClose }) {
+  const [imagemAtiva, setImagemAtiva] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const touchStartX = useRef(null);
+
+  const getImagemSrc = (item) => (typeof item === "string" ? item : item.src);
+  const getImagemLabel = (item) => (typeof item === "string" ? null : item.label);
+
+  useEffect(() => {
+    requestAnimationFrame(() => setVisible(true));
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        handleClose();
+        return;
+      }
+
+      if (projeto.galeria.length < 2) {
+        return;
+      }
+
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        setImagemAtiva((current) => (current + 1) % projeto.galeria.length);
+      }
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        setImagemAtiva((current) =>
+          (current - 1 + projeto.galeria.length) % projeto.galeria.length,
+        );
+      }
+    };
+
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, []);
+
+  function handleClose() {
+    setVisible(false);
+    setTimeout(onClose, 400);
+  }
+
+  function handleTouchStart(e) {
+    if (projeto.galeria.length < 2) return;
+    touchStartX.current = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e) {
+    if (touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (Math.abs(deltaX) < 50) return;
+
+    if (deltaX < 0) {
+      // Swipe para a esquerda => próxima imagem
+      setImagemAtiva((current) => (current + 1) % projeto.galeria.length);
+    } else {
+      // Swipe para a direita => imagem anterior
+      setImagemAtiva((current) =>
+        (current - 1 + projeto.galeria.length) % projeto.galeria.length,
+      );
+    }
+  }
+
+  return (
+    <div
+      className={`modal-backdrop ${visible ? "modal-backdrop--visible" : ""}`}
+      onClick={(e) => e.target === e.currentTarget && handleClose()}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Projeto ${projeto.titulo}`}
+    >
+      <div className={`modal ${visible ? "modal--visible" : ""}`}>
+        <button
+          className="modal__close"
+          onClick={handleClose}
+          aria-label="Fechar"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M2 2l16 16M18 2L2 18"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+
+        <div
+          className="modal__gallery"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className="modal__main-image-wrap">
+            {getImagemLabel(projeto.galeria[imagemAtiva]) && (
+              <span className="modal__badge">
+                {getImagemLabel(projeto.galeria[imagemAtiva])}
+              </span>
+            )}
+            <img
+              key={imagemAtiva}
+              src={getImagemSrc(projeto.galeria[imagemAtiva])}
+              alt={`${projeto.titulo} — imagem ${imagemAtiva + 1}`}
+              className="modal__main-image"
+              width="1200"
+              height="800"
+            />
+          </div>
+          {projeto.galeria.length > 1 && (
+            <div className="modal__thumbs">
+              {projeto.galeria.map((img, i) => (
+                <button
+                  key={i}
+                  className={`modal__thumb ${imagemAtiva === i ? "modal__thumb--active" : ""}`}
+                  onClick={() => setImagemAtiva(i)}
+                  aria-label={`Ver imagem ${i + 1}${getImagemLabel(img) ? ` — ${getImagemLabel(img)}` : ""}`}
+                >
+                  <img src={getImagemSrc(img)} alt="" width="120" height="80" />
+                  {getImagemLabel(img) && (
+                    <span className="modal__thumb-badge">{getImagemLabel(img)}</span>
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="modal__info">
+          <p className="modal__categoria">
+            {projeto.categoria} — {projeto.ano}
+          </p>
+          <h2 className="modal__titulo">{projeto.titulo}</h2>
+          <p className="modal__subtitulo">{projeto.subtitulo}</p>
+          <div className="modal__divider" />
+          <p className="modal__descricao">{projeto.descricao}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
