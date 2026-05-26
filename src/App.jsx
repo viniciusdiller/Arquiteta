@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
-import Midia from "./components/Midia";
 import Sobre from "./components/Sobre";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
@@ -17,7 +16,6 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <Portfolio />
-        <Midia />
         <Sobre />
       </main>
       <Footer />

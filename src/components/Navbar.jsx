@@ -30,7 +30,6 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Projetos", href: "#projetos" },
-    { label: "Mídia", href: "#midia" },
     { label: "Sobre", href: "#sobre" },
     { label: "Contato", href: "#contato" },
   ];
